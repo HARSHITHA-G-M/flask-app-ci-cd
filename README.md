@@ -50,8 +50,6 @@ flask-app-ci-cd/
 ---
 
 ## 🧪 Pytest Command
-
-```bash
 PYTHONPATH=. pytest test/
 
 🐳 Docker Commands Used
