@@ -70,9 +70,36 @@ docker run -d -p 5000:5000 yourusername/flask-cicd-app
 ✅ Output
 Jenkins builds and tests the Flask app.
 
-If tests pass, it builds the Docker image and pushes it to Docker Hub.
 
+🚀 Cloud Native Buildpacks Integration
+This project uses Cloud Native Buildpacks to build the Docker image for the Flask application without writing a Dockerfile.
+
+✅ Why Buildpacks?
+No Dockerfile needed
+Auto-detects runtime and builds accordingly
+Used by platforms like Heroku, Google Cloud Run, and Paketo
+Automatically installs Python, Gunicorn, and dependencies
+
+🔧 Buildpacks Used
+Builder: gcr.io/buildpacks/builder:google-22
+Runtime Detected: Python
+Entrypoint: main.py or defined via Procfile / GOOGLE_ENTRYPOINT
+
+
+🛠️ How to Build Using Buildpacks
+cd app  # Make sure you're in the directory with main.py and requirements.txt
+pack build flask-app --builder gcr.io/buildpacks/builder:google-22
+Make sure pack CLI is installed: Install Pack CLI
+
+🐳 Run the Built Image
+docker run -p 5000:8080 flask-app
+Then visit: http://localhost:5000
+
+If tests pass, it builds the Docker image and pushes it to Docker Hub.
 Finally, the app is available to run via Docker.
+
+![Buildpacks](https://img.shields.io/badge/Built%20With-Buildpacks-blue)
+
 
 🤝 Connect
 Built by Harshitha
