@@ -2,6 +2,7 @@
 
 A complete CI/CD pipeline for a Flask web application using **Jenkins Freestyle Job**, **Docker**, **Pytest**, and **Docker Hub**.  
 This project demonstrates automated testing, Docker image building, and pushing to Docker Hub with Jenkins.
+![Buildpacks](https://img.shields.io/badge/Built%20With-Buildpacks-blue)
 
 ---
 
@@ -97,9 +98,6 @@ Then visit: http://localhost:5000
 
 If tests pass, it builds the Docker image and pushes it to Docker Hub.
 Finally, the app is available to run via Docker.
-
-![Buildpacks](https://img.shields.io/badge/Built%20With-Buildpacks-blue)
-
 
 🤝 Connect
 Built by Harshitha
